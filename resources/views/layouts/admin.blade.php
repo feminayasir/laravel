@@ -41,6 +41,7 @@
 </head>
 <body>
     <div id="app">
+        @include('partials.navbar')
 
         <main class="py-4 container">
             @yield('content')

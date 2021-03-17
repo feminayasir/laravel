@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('user', 'App\Http\Controllers\UserController');
+Route::resource('role', 'App\Http\Controllers\RoleController');
+Route::resource('permission', 'App\Http\Controllers\PermissionController');
 
 Auth::routes();
 
